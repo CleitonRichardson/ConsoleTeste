@@ -9,10 +9,11 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
+
 namespace ConsoleTeste
 {
     [TestFixture]
-    public class ProspeccaoVenda
+    public class MotivoNaoInteresse
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -42,9 +43,9 @@ namespace ConsoleTeste
         }
         
         [Test]
-        public void TheProspeccaoVendaTest()
+        public void TheMotivoNaoInteresseTest()
         {
-            
+
             //CODIGO COPIADO DA CLASSE LoginValido
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(baseURL);
@@ -57,26 +58,20 @@ namespace ConsoleTeste
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
-                       
+            
+            
             //não consegui colocar a seleção dos submenus, já que estes não dependem de click, sendo assim só o último menu é registrado
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");                     
-            //driver.FindElement(By.CssSelector("#mnProspecçãoeVenda > span")).Click();                      
-                                                
-            Thread.Sleep(5000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
-            driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();
-            Thread.Sleep(4000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
-            //driver.FindElement(By.LinkText("Prev")).Click(); //DURANTE O PREENCHIMENTO DO CAMPO DATA, NO CALENDÁRIO, NÃO ACEITA VOLTAR OU AVANÇAR O MÊS
-            driver.FindElement(By.LinkText("17")).Click(); 
-            driver.FindElement(By.Id("Edit-Observacoes")).Clear();
-            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Testedo08:01");
-            new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 015");            
-            new SelectElement(driver.FindElement(By.Id("Edit-MotivoNaoInteresseId"))).SelectByText("Sou muito jovem para fazer previdência");
-            new SelectElement(driver.FindElement(By.Id("Edit-CorretorId"))).SelectByText("Marcos Medeiros");
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/MotivoNaoInteresse");
+
+            Thread.Sleep(3000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
+            driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();            
+            driver.FindElement(By.XPath("//textarea[@id='Edit-Nome']")).Clear();       
+            driver.FindElement(By.XPath("//textarea[@id='Edit-Nome']")).SendKeys("Tenho vida eterna");
             driver.FindElement(By.Id("AddRecordDialogSaveButton")).Click();
             //driver.Quit();
-            
-            
+
         }
+        
         private bool IsElementPresent(By by)
         {
             try

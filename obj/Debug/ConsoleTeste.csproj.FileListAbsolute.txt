@@ -17,6 +17,7 @@ C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTest
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ChromeDriver\chromedriver.exe
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginInvalido.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginValido.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\MotivoNaoInteresse.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\Program.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe.config
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe
@@ -29,4 +30,3 @@ C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\W
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.Support.xml
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.exe
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.pdb
-C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.csprojResolveAssemblyReference.cache
