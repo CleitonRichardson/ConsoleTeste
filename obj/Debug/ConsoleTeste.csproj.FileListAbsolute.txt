@@ -1,0 +1,32 @@
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\ConsoleTeste.exe.config
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\obj\Debug\ConsoleTeste.exe
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\obj\Debug\ConsoleTeste.pdb
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\ChromeDriver\chromedriver.exe
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\LoginInvalido.cs
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\LoginValido.cs
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\Program.cs
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\ConsoleTeste.exe
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\ConsoleTeste.pdb
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\nunit.framework.dll
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.dll
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.Support.dll
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\nunit.framework.xml
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.xml
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.Support.xml
+C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\obj\Debug\ConsoleTeste.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ChromeDriver\chromedriver.exe
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginInvalido.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginValido.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\Program.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe.config
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.pdb
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\nunit.framework.dll
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.dll
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.Support.dll
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\nunit.framework.xml
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.xml
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.Support.xml
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.exe
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.pdb
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.csprojResolveAssemblyReference.cache
