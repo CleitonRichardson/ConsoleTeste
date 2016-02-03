@@ -42,7 +42,6 @@ namespace ConsoleTeste
         }
 
         [Test]
-
          public void TheLoginInvalidoTest()
          {
           driver.Manage().Window.Maximize();

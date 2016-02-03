@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AvaliacaoPrevia.cs" />
     <Compile Include="LoginInvalido.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

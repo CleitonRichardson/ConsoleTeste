@@ -15,23 +15,26 @@ namespace ConsoleTeste
             var TesteLoginValido = new LoginValido();
             var TesteProspeccaoVenda = new ProspeccaoVenda();
             var TesteMotivoNaoInteresse = new MotivoNaoInteresse();
+            var TesteAvaliacaoPrevia = new AvaliacaoPrevia();
                                     
             
             try
             {
 
-                TesteLoginInvalido.SetupTest();
-                TesteLoginInvalido.TheLoginInvalidoTest();
+                //TesteLoginInvalido.SetupTest();
+                //TesteLoginInvalido.TheLoginInvalidoTest();
 
-                TesteLoginValido.SetupTest();
-                TesteLoginValido.TheLoginValidoTest();
+                //TesteLoginValido.SetupTest();
+                //TesteLoginValido.TheLoginValidoTest();
 
-                TesteProspeccaoVenda.SetupTest();
-                TesteProspeccaoVenda.TheProspeccaoVendaTest();
+                //TesteProspeccaoVenda.SetupTest();
+                //TesteProspeccaoVenda.TheProspeccaoVendaTest();
 
-                TesteMotivoNaoInteresse.SetupTest();
-                TesteMotivoNaoInteresse.TheMotivoNaoInteresseTest();
+                //TesteMotivoNaoInteresse.SetupTest();
+                //TesteMotivoNaoInteresse.TheMotivoNaoInteresseTest();
 
+                TesteAvaliacaoPrevia.SetupTest();
+                TesteAvaliacaoPrevia.TheAvaliacaoPreviaTest();
 
                 Console.WriteLine("Sucesso!");
             }
@@ -42,10 +45,11 @@ namespace ConsoleTeste
             finally
             {
 
-                TesteLoginInvalido.TeardownTest();
-                TesteLoginValido.TeardownTest();
-                TesteProspeccaoVenda.TeardownTest();
-                TesteMotivoNaoInteresse.TeardownTest();
+                //TesteLoginInvalido.TeardownTest();
+                //TesteLoginValido.TeardownTest();
+                //TesteProspeccaoVenda.TeardownTest();
+                //TesteMotivoNaoInteresse.TeardownTest();
+                TesteAvaliacaoPrevia.TeardownTest();
 
             }
         }
