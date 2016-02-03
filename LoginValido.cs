@@ -56,6 +56,8 @@ namespace ConsoleTeste
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
+
+            Thread.Sleep(5000);
            // driver.Quit();       
                        
             

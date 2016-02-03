@@ -16,9 +16,10 @@ namespace ConsoleTeste
             var TesteProspeccaoVenda = new ProspeccaoVenda();
             var TesteMotivoNaoInteresse = new MotivoNaoInteresse();
             var TesteAvaliacaoPrevia = new AvaliacaoPrevia();
-                                    
+            var TesteRegistroDocumentacao = new RegistroDocumentacao();
             
             try
+
             {
 
                 //TesteLoginInvalido.SetupTest();
@@ -27,14 +28,17 @@ namespace ConsoleTeste
                 //TesteLoginValido.SetupTest();
                 //TesteLoginValido.TheLoginValidoTest();
 
-                //TesteProspeccaoVenda.SetupTest();
-                //TesteProspeccaoVenda.TheProspeccaoVendaTest();
+                TesteProspeccaoVenda.SetupTest();
+                TesteProspeccaoVenda.TheProspeccaoVendaTest();
 
                 //TesteMotivoNaoInteresse.SetupTest();
                 //TesteMotivoNaoInteresse.TheMotivoNaoInteresseTest();
 
-                TesteAvaliacaoPrevia.SetupTest();
-                TesteAvaliacaoPrevia.TheAvaliacaoPreviaTest();
+                //TesteAvaliacaoPrevia.SetupTest();
+                //TesteAvaliacaoPrevia.TheAvaliacaoPreviaTest();
+
+                //TesteRegistroDocumentacao.SetupTest();
+                //TesteRegistroDocumentacao.TheRegistroDocumentacaoTest();
 
                 Console.WriteLine("Sucesso!");
             }
@@ -47,9 +51,10 @@ namespace ConsoleTeste
 
                 //TesteLoginInvalido.TeardownTest();
                 //TesteLoginValido.TeardownTest();
-                //TesteProspeccaoVenda.TeardownTest();
+                TesteProspeccaoVenda.TeardownTest();
                 //TesteMotivoNaoInteresse.TeardownTest();
-                TesteAvaliacaoPrevia.TeardownTest();
+                //TesteAvaliacaoPrevia.TeardownTest();
+                //TesteRegistroDocumentacao.TeardownTest();
 
             }
         }

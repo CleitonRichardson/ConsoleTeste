@@ -53,6 +53,7 @@ namespace ConsoleTeste
           driver.FindElement(By.XPath("//button[@type='submit']")).Click();
           Thread.Sleep(2000);
           Assert.AreEqual("Usuário e/ou senha inválidos", driver.FindElement(By.CssSelector("span.field-validation-error")).Text);
+          Thread.Sleep(5000);
           //driver.Quit();
          }
 

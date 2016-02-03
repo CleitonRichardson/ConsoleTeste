@@ -30,3 +30,4 @@ C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\W
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\WebDriver.Support.xml
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.exe
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.pdb
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\obj\Debug\ConsoleTeste.csprojResolveAssemblyReference.cache

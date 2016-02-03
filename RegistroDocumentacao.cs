@@ -12,7 +12,7 @@ using OpenQA.Selenium.Support.UI;
 namespace ConsoleTeste
 {
     [TestFixture]
-    public class ProspeccaoVenda
+    public class RegistroDocumentacao
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -42,9 +42,8 @@ namespace ConsoleTeste
         }
         
         [Test]
-        public void TheProspeccaoVendaTest()
+        public void TheRegistroDocumentacaoTest()
         {
-            
             //CODIGO COPIADO DA CLASSE LoginValido
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(baseURL);
@@ -53,33 +52,38 @@ namespace ConsoleTeste
             driver.FindElement(By.Name("senha")).Clear();
             driver.FindElement(By.Name("senha")).SendKeys("123");
             driver.FindElement(By.XPath("//button[@type='submit']")).Click();
-            //depende do browser estar maximizado, para que a expressão "bem vindo" seja exibida e assim possa ser capturada            
+            //depende do browser estar maximizado, para que a express�o "bem vindo" seja exibida e assim possa ser capturada            
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
-                       
-            //não consegui colocar a seleção dos submenus, já que estes não dependem de click, sendo assim só o último menu é registrado
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");                                                                                                 
-            Thread.Sleep(5000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
-                        
-            //Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
-            var numeroRegistros = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);           
 
-            driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();
-            Thread.Sleep(4000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
-            //driver.FindElement(By.LinkText("Prev")).Click(); //DURANTE O PREENCHIMENTO DO CAMPO DATA, NO CALENDÁRIO, NÃO ACEITA VOLTAR OU AVANÇAR O MÊS
-            driver.FindElement(By.LinkText("17")).Click(); 
-            driver.FindElement(By.Id("Edit-Observacoes")).Clear();
-            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Teste de Observação");
-            new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 015");            
-            new SelectElement(driver.FindElement(By.Id("Edit-MotivoNaoInteresseId"))).SelectByText("Sou muito jovem para fazer previdência");
-            new SelectElement(driver.FindElement(By.Id("Edit-CorretorId"))).SelectByText("Marcos Medeiros");
-            driver.FindElement(By.Id("AddRecordDialogSaveButton")).Click();            
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/SolicitacaoBeneficio");
+            // ERROR: Caught exception [Error: locator strategy either id or name must be specified explicitly.]
+            Thread.Sleep(2000);
+            driver.FindElement(By.Id("canvas-for-livicon-6")).Click();  //esse tive que pegar na m�o... indo l�, vendo o c�digo HTML e digitando aqui
+            Thread.Sleep(2000);
+            new SelectElement(driver.FindElement(By.CssSelector("select"))).SelectByText("Sim");
+            Thread.Sleep(2000);
+            new SelectElement(driver.FindElement(By.XPath("//div[@id='exibicaoDeMensagem']/div[9]/div[2]/div/form/div/div/div/table[2]/tbody/tr[2]/td[5]/select"))).SelectByText("Sim");
+            Thread.Sleep(2000);
+            new SelectElement(driver.FindElement(By.XPath("//div[@id='exibicaoDeMensagem']/div[9]/div[2]/div/form/div/div/div/table[2]/tbody/tr[3]/td[5]/select"))).SelectByText("Sim");
+            Thread.Sleep(2000);
+            driver.FindElement(By.CssSelector("a.ico-anexo")).Click();
+            Thread.Sleep(5000);
 
-            Thread.Sleep(4000); //tempo necesário para que o novo registro seja salvo e exibido.
-            //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
-            Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistros);
-            Thread.Sleep(10000);
+
+            //N�o consegui pegar o click no "escolher arquivo". INCOMPLETO
+
+            //driver.FindElement(By.Id("modalAnxarArquivo")).Click();   //']  .Name("inputUploadDeArquivos")).Click();
+            //Thread.Sleep(4000);
+            //driver.FindElement(By.Id("inputUploadDeArquivos")).SendKeys("C:\\Users\\Charles\\Desktop\\COF.txt");
+            //Thread.Sleep(4000);
+            //driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();
+            //Thread.Sleep(2000);
+            //driver.FindElement(By.Id("btn-disp_solic_para_conf")).Click();
+            //Thread.Sleep(2000);
+            //driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();
+            //Thread.Sleep(2000);
         }
         private bool IsElementPresent(By by)
         {
