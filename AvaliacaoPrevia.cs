@@ -57,10 +57,15 @@ namespace ConsoleTeste
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
+                       
 
 
             driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/AvaliacaoPrevia"); //Link direto inserido manualmente em razão de ainda nao conseguir fazer pelo Menu
-            Thread.Sleep(5000);            
+            Thread.Sleep(5000);
+
+            //Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
+            var numeroRegistrosAvaliacaoPrevia = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);           
+            
             driver.FindElement(By.Id("canvas-for-livicon-4")).Click();  //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
             Thread.Sleep(3000);
             driver.FindElement(By.Id("percentualMaximoDeSaque")).Clear(); //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
@@ -80,6 +85,9 @@ namespace ConsoleTeste
             driver.FindElement(By.XPath("(//button[@type='button'])[23]")).Click();
             Thread.Sleep(5000);
 
+            //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
+            Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistrosAvaliacaoPrevia);
+            Thread.Sleep(6000);
 
         }
         private bool IsElementPresent(By by)

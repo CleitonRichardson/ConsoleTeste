@@ -62,13 +62,20 @@ namespace ConsoleTeste
             
             //não consegui colocar a seleção dos submenus, já que estes não dependem de click, sendo assim só o último menu é registrado
             driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/MotivoNaoInteresse");
-
+            
             Thread.Sleep(3000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
+
+            //Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
+            var numeroRegistrosMotivoNaoInteresse = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);    
+
             driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();            
             driver.FindElement(By.XPath("//textarea[@id='Edit-Nome']")).Clear();       
             driver.FindElement(By.XPath("//textarea[@id='Edit-Nome']")).SendKeys("Tenho vida eterna");
             driver.FindElement(By.Id("AddRecordDialogSaveButton")).Click();
             //driver.Quit();
+
+            //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
+            Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistrosMotivoNaoInteresse);
 
         }
         
