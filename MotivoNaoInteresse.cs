@@ -66,7 +66,7 @@ namespace ConsoleTeste
             Thread.Sleep(3000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA
 
             //Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
-            var numeroRegistrosMotivoNaoInteresse = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);    
+            //var numeroRegistrosMotivoNaoInteresse = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);    
 
             driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();            
             driver.FindElement(By.XPath("//textarea[@id='Edit-Nome']")).Clear();       
@@ -75,7 +75,10 @@ namespace ConsoleTeste
             //driver.Quit();
 
             //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
-            Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistrosMotivoNaoInteresse);
+            //Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistrosMotivoNaoInteresse);
+            Thread.Sleep(1000);
+            Assert.AreEqual("Registro incluído com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
+
 
         }
         

@@ -12,7 +12,7 @@ using OpenQA.Selenium.Support.UI;
 namespace ConsoleTeste
 {
     [TestFixture]
-    public class RegistroDocumentacao
+    public class BeneficioConcessao
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -42,7 +42,7 @@ namespace ConsoleTeste
         }
         
         [Test]
-        public void TheRegistroDocumentacaoTest()
+        public void TheBeneficioConcessaoTest()
         {
             //CODIGO COPIADO DA CLASSE LoginValido
             driver.Manage().Window.Maximize();
@@ -52,46 +52,53 @@ namespace ConsoleTeste
             driver.FindElement(By.Name("senha")).Clear();
             driver.FindElement(By.Name("senha")).SendKeys("123");
             driver.FindElement(By.XPath("//button[@type='submit']")).Click();
-            //depende do browser estar maximizado, para que a expressão "bem vindo" seja exibida e assim possa ser capturada            
+            //depende do browser estar maximizado, para que a expressÃ£o "bem vindo" seja exibida e assim possa ser capturada            
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
 
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/SolicitacaoBeneficio");            
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/RealizacaoConcessao");
             Thread.Sleep(2000);
-            driver.FindElement(By.Id("canvas-for-livicon-6")).Click();  //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
-            Thread.Sleep(2000);
-            new SelectElement(driver.FindElement(By.CssSelector("select"))).SelectByText("Sim");
-            Thread.Sleep(2000);
-            new SelectElement(driver.FindElement(By.XPath("//div[@id='exibicaoDeMensagem']/div[9]/div[2]/div/form/div/div/div/table[2]/tbody/tr[2]/td[5]/select"))).SelectByText("Sim");
-            Thread.Sleep(2000);
-            new SelectElement(driver.FindElement(By.XPath("//div[@id='exibicaoDeMensagem']/div[9]/div[2]/div/form/div/div/div/table[2]/tbody/tr[3]/td[5]/select"))).SelectByText("Sim");
-            Thread.Sleep(2000);
-            driver.FindElement(By.CssSelector("a.ico-anexo")).Click();
-            Thread.Sleep(3000);
 
-            //O Selenium não pega a funcionalidade de Upload; o código abaixo, que faz o upload funcionar, foi obtido na Internet após MUUUUUITA pesquisa; 
-            //http://sqa.stackexchange.com/questions/15103/testing-the-downloading-uploading-of-files-with-selenium-ide-webdriver-other
-            IWebElement element = driver.FindElement(By.Name("inputUploadDeArquivos"));;
-            element.SendKeys(@"C:\\Users\\Charles\\Desktop\\COF.txt");
-                        
-            Thread.Sleep(2000);            
-            driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();            
-            Thread.Sleep(2000);
-            driver.FindElement(By.Id("btn-disp_solic_para_conf")).Click();
-            Thread.Sleep(2000);
-            driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();
-            Thread.Sleep(2000);
-            Assert.AreEqual("Solicitação transferida para conferência de documentos", driver.FindElement(By.CssSelector("ul.item-list > li")).Text);
-            Thread.Sleep(2000);
-            //Até aqui o teste é baseado no funcionamento padrão, onde é necessário anexar de forma obrigatória apenas UM documento.
-            //O problema é que algumas vezes é necessário anexar mais de um documento.
-            //Ao tentar "Diponibiliar uma proposta" sem anexar documento que seja de anexação obrigatória, é abera uma caixa de diálogo para que seja digitada uma justificativa.
+            //EM DESENVOLVIMENTO
 
-
-
+            //driver.FindElement(By.Id("canvas-for-livicon-6")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("CodigoDoProcesso")).Clear();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("CodigoDoProcesso")).SendKeys("123456789");
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("dp1455208152249")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.LinkText("1")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("dp1455208152250")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.LinkText("2")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Name("Numero")).Clear();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Name("Numero")).SendKeys("987654321");
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("dp1455208152251")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.LinkText("3")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("incluirAnexo")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("inputUploadDeArquivos")).Clear();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("inputUploadDeArquivos")).SendKeys("C:\\Users\\Charles\\Desktop\\COF.txt");
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.XPath("(//button[@type='button'])[3]")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.Id("btn-registrar_concessao")).Click();
+            //Thread.Sleep(2000);            
+            //driver.FindElement(By.XPath("(//button[@type='button'])[5]")).Click();
+            //Thread.Sleep(2000);            
+            //Assert.AreEqual("ConcessÃ£o registrada com sucesso!", driver.FindElement(By.CssSelector("ul.item-list > li")).Text);
+            //Thread.Sleep(2000);            
         }
-
         private bool IsElementPresent(By by)
         {
             try

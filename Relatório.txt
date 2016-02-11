@@ -1,0 +1,6 @@
+PROBLEMAS:
+
+
+Selenium não registra click em submenus;
+Selenium não registra click em calendário [Prospecção e venda - data da prospecção];
+Selenium não registra click em modal destinada a fazer upload de arquivo;

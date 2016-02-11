@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AvaliacaoPrevia.cs" />
+    <Compile Include="BeneficioConcessao.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ConferenciaDocumentacao.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="LoginInvalido.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

@@ -17,6 +17,10 @@ namespace ConsoleTeste
             var TesteMotivoNaoInteresse = new MotivoNaoInteresse();
             var TesteAvaliacaoPrevia = new AvaliacaoPrevia();
             var TesteRegistroDocumentacao = new RegistroDocumentacao();
+            var TesteConferenciaDocumentacao = new ConferenciaDocumentacao();
+            var TesteBeneficioConcessao = new BeneficioConcessao();
+
+
             
             try
 
@@ -34,11 +38,18 @@ namespace ConsoleTeste
                 //TesteMotivoNaoInteresse.SetupTest();
                 //TesteMotivoNaoInteresse.TheMotivoNaoInteresseTest();
 
-                TesteAvaliacaoPrevia.SetupTest();
-                TesteAvaliacaoPrevia.TheAvaliacaoPreviaTest();
+                //TesteAvaliacaoPrevia.SetupTest();
+                //TesteAvaliacaoPrevia.TheAvaliacaoPreviaTest();
 
                 //TesteRegistroDocumentacao.SetupTest();
                 //TesteRegistroDocumentacao.TheRegistroDocumentacaoTest();
+
+                //TesteConferenciaDocumentacao.SetupTest();
+                //TesteConferenciaDocumentacao.TheConferenciaDocumentacaoTest();
+
+                TesteBeneficioConcessao.SetupTest();
+                TesteBeneficioConcessao.TheBeneficioConcessaoTest();
+
 
                 Console.WriteLine("Sucesso!");
             }
@@ -53,8 +64,10 @@ namespace ConsoleTeste
                 //TesteLoginValido.TeardownTest();
                 //TesteProspeccaoVenda.TeardownTest();
                 //TesteMotivoNaoInteresse.TeardownTest();
-                TesteAvaliacaoPrevia.TeardownTest();
+                //TesteAvaliacaoPrevia.TeardownTest();
                 //TesteRegistroDocumentacao.TeardownTest();
+                //TesteConferenciaDocumentacao.TeardownTest();
+                TesteBeneficioConcessao.TeardownTest();
 
             }
         }
