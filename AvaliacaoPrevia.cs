@@ -70,7 +70,7 @@ namespace ConsoleTeste
             Thread.Sleep(3000);
             driver.FindElement(By.Id("percentualMaximoDeSaque")).Clear(); //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
             Thread.Sleep(2000);
-            driver.FindElement(By.Id("percentualMaximoDeSaque")).SendKeys("2500");
+            driver.FindElement(By.Id("percentualMaximoDeSaque")).SendKeys("2500"); // o valor máximo é de 30%. FAZER UMA ROTINA QUE VERIFICA ESSE VALOR MÁXIMO
             Thread.Sleep(2000);
             driver.FindElement(By.Id("btn-continuar")).Click();
             Thread.Sleep(15000);   

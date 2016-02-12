@@ -58,39 +58,58 @@ namespace ConsoleTeste
             Assert.IsTrue(contains);
 
             driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/RealizacaoConcessao");
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+
+            //EM DESENVOLVIMENTO
+
             driver.FindElement(By.Id("canvas-for-livicon-6")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
             driver.FindElement(By.Id("CodigoDoProcesso")).Clear();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
             driver.FindElement(By.Id("CodigoDoProcesso")).SendKeys("123456789");
-            Thread.Sleep(2000);            
-            driver.FindElement(By.Id("dp1455208152249")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+
+            //O Selenium gravou o elemento CALENDÁRIO pelo ID, porém desta maneira o teste NÃO roda; troquei pelo NAME e assim ficou ok 
+            //driver.FindElement(By.Id("dp1455208152249")).Click();
+            driver.FindElement(By.Name("DataDaHomologacao")).Click();
+            Thread.Sleep(1000);
             driver.FindElement(By.LinkText("1")).Click();
-            Thread.Sleep(2000);            
-            driver.FindElement(By.Id("dp1455208152250")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+
+            //O Selenium gravou o elemento CALENDÁRIO pelo ID, porém desta maneira o teste NÃO roda; troquei pelo NAME e assim ficou ok 
+            //driver.FindElement(By.Id("dp1455208152250")).Click();
+            driver.FindElement(By.Name("DataDaConcessao")).Click();
+            Thread.Sleep(1000);
             driver.FindElement(By.LinkText("2")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+
             driver.FindElement(By.Name("Numero")).Clear();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
             driver.FindElement(By.Name("Numero")).SendKeys("987654321");
-            Thread.Sleep(2000);            
-            driver.FindElement(By.Id("dp1455208152251")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+
+            //O Selenium gravou o elemento CALENDÁRIO pelo ID, porém desta maneira o teste NÃO roda; troquei pelo NAME e assim ficou ok 
+            //driver.FindElement(By.Id("dp1455208152251")).Click();
+            driver.FindElement(By.Name("DataDePublicacao")).Click();
+            Thread.Sleep(1000);
             driver.FindElement(By.LinkText("3")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);
+            
+            //driver.FindElement(By.CssSelector("incluirAnexo")).Click();
             driver.FindElement(By.Id("incluirAnexo")).Click();
-            Thread.Sleep(2000);            
-            driver.FindElement(By.Id("inputUploadDeArquivos")).Clear();
-            Thread.Sleep(2000);            
-            driver.FindElement(By.Id("inputUploadDeArquivos")).SendKeys("C:\\Users\\Charles\\Desktop\\COF.txt");
-            Thread.Sleep(2000);            
+            Thread.Sleep(1000);            
+
+            //O Selenium não pega a funcionalidade de Upload; o código abaixo, que faz o upload funcionar, foi obtido na Internet após MUUUUUITA pesquisa; 
+            //http://sqa.stackexchange.com/questions/15103/testing-the-downloading-uploading-of-files-with-selenium-ide-webdriver-other
+            IWebElement element = driver.FindElement(By.Name("inputUploadDeArquivos"));
+            Thread.Sleep(1000);
+            element.SendKeys(@"C:\\Users\\Charles\\Desktop\\COF.txt");
+            
+            Thread.Sleep(1000);            
             driver.FindElement(By.XPath("(//button[@type='button'])[3]")).Click();
             Thread.Sleep(2000);            
             driver.FindElement(By.Id("btn-registrar_concessao")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(2000);
             driver.FindElement(By.XPath("(//button[@type='button'])[5]")).Click();
             Thread.Sleep(2000);            
             Assert.AreEqual("Concessão registrada com sucesso!", driver.FindElement(By.CssSelector("ul.item-list > li")).Text);

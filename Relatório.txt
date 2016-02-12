@@ -2,5 +2,10 @@ PROBLEMAS:
 
 
 Selenium não registra click em submenus;
+
 Selenium não registra click em calendário [Prospecção e venda - data da prospecção];
-Selenium não registra click em modal destinada a fazer upload de arquivo;
+
+Selenium não registra click em modal destinada a fazer upload de arquivo; [Em Registro de Documento. Solução feita à mão - encontrada na Internet.]
+
+Em algumas vezes, mesmo o Selenium registrando o click no elemento, ao rodar o teste não funciona. Em alguns casos a razão é simples: O Seleinum registra o elemento pelo ID quando deveria registrar pelo NAME (e vice-versa).
+

@@ -72,7 +72,7 @@ namespace ConsoleTeste
 
             //O Selenium não pega a funcionalidade de Upload; o código abaixo, que faz o upload funcionar, foi obtido na Internet após MUUUUUITA pesquisa; 
             //http://sqa.stackexchange.com/questions/15103/testing-the-downloading-uploading-of-files-with-selenium-ide-webdriver-other
-            IWebElement element = driver.FindElement(By.Name("inputUploadDeArquivos"));;
+            IWebElement element = driver.FindElement(By.Name("inputUploadDeArquivos"));
             element.SendKeys(@"C:\\Users\\Charles\\Desktop\\COF.txt");
                         
             Thread.Sleep(2000);            
@@ -85,8 +85,12 @@ namespace ConsoleTeste
             Assert.AreEqual("Solicitação transferida para conferência de documentos", driver.FindElement(By.CssSelector("ul.item-list > li")).Text);
             Thread.Sleep(2000);
             //Até aqui o teste é baseado no funcionamento padrão, onde é necessário anexar de forma obrigatória apenas UM documento.
-            //O problema é que algumas vezes é necessário anexar mais de um documento.
-            //Ao tentar "Diponibiliar uma proposta" sem anexar documento que seja de anexação obrigatória, é abera uma caixa de diálogo para que seja digitada uma justificativa.
+            //O problema é que algumas vezes é necessário anexar mais de um documento (Quando na Avaliação Prévia é selecionado "Pensão Por Morte", por exemplo).
+            //
+            //localizei um defeito: Se clico no ícone para anexar um arquivo, mas em, seguida fecho a modal sem selecionar arquivo algum, quando clico novamente
+            //no ícone novamente para anexar um arquivo, a tela fica cinza e não é possível mais usar o sistema... sendo necessário realizar um REFRESh para que volte ao normal.
+            //
+            //Ao tentar "Diponibilizar uma proposta" sem anexar documento que seja de anexação obrigatória, é aberta uma caixa de diálogo para que seja digitada uma justificativa.
 
 
 
