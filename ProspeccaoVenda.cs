@@ -108,16 +108,40 @@ namespace ConsoleTeste
             driver.FindElement(By.Id("EditDialogSaveButton")).Click();
             Thread.Sleep(500);
             Assert.AreEqual("Registro alterado com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
-            Thread.Sleep(500);
+            Thread.Sleep(3000);
 
             //DELETE
             driver.FindElement(By.Id("livicon-7")).Click();
             Thread.Sleep(500);
             driver.FindElement(By.Id("DeleteDialogButton")).Click();
-            Thread.Sleep(500);
+            Thread.Sleep(3000);
             Assert.AreEqual("Registro excluído com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
-            Thread.Sleep(1000);
+            Thread.Sleep(6000);
 
+
+            //OUTROS COMANDOS - NAVEGAÇÃO ENTRE OS REGISTROS E MODIFICANDO A QUANTIDADE DE REGISTRO A SER EXIBIDO
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
+            Thread.Sleep(3000);
+            driver.FindElement(By.CssSelector("span.jtable-page-number-next")).Click();
+            Thread.Sleep(3000);
+            driver.FindElement(By.CssSelector("span.jtable-page-number-next")).Click();
+            Thread.Sleep(3000);
+            driver.FindElement(By.CssSelector("span.jtable-page-number-last")).Click();
+            Thread.Sleep(3000);
+            driver.FindElement(By.CssSelector("span.jtable-page-number-first")).Click();
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("select"))).SelectByText("2");
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("select"))).SelectByText("4");
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("select"))).SelectByText("1");
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("span.jtable-page-size-change > select"))).SelectByText("25");
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("span.jtable-page-size-change > select"))).SelectByText("50");
+            Thread.Sleep(3000);
+            new SelectElement(driver.FindElement(By.CssSelector("span.jtable-page-size-change > select"))).SelectByText("10");
+            Thread.Sleep(3000);
         }
         private bool IsElementPresent(By by)
         {
