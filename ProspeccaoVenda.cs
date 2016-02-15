@@ -49,8 +49,10 @@ namespace ConsoleTeste
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(baseURL);
             driver.FindElement(By.Name("usuario")).Clear();
+            Thread.Sleep(500);
             driver.FindElement(By.Name("usuario")).SendKeys("cleiton");
             driver.FindElement(By.Name("senha")).Clear();
+            Thread.Sleep(500);
             driver.FindElement(By.Name("senha")).SendKeys("123");
             driver.FindElement(By.XPath("//button[@type='submit']")).Click();
             //depende do browser estar maximizado, para que a expressão "bem vindo" seja exibida e assim possa ser capturada            
@@ -62,59 +64,59 @@ namespace ConsoleTeste
             // CREATE
             //não consegui colocar a seleção dos submenus, já que estes não dependem de click, sendo assim só o último menu é registrado
             driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
-            Thread.Sleep(5000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA                                    
+            Thread.Sleep(1000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA                                    
             //Assert: Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
             var numeroRegistros = (driver.FindElement(By.CssSelector("span.jtable-page-info")).Text);
             driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();
-            Thread.Sleep(4000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA            
-            driver.FindElement(By.LinkText("17")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA                                    
+            driver.FindElement(By.LinkText("17")).Click();            
+            Thread.Sleep(500);
             driver.FindElement(By.Id("Edit-Observacoes")).Clear();
-            Thread.Sleep(2000);
-            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Teste de Observação");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
+            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Teste de CREATE");
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 015");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-MotivoNaoInteresseId"))).SelectByText("Sou muito jovem para fazer previdência");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-CorretorId"))).SelectByText("Marcos Medeiros");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             driver.FindElement(By.Id("AddRecordDialogSaveButton")).Click();
-            Thread.Sleep(4000); //tempo necesário para que o novo registro seja salvo e exibido.
+            Thread.Sleep(1000); //tempo necesário para que o novo registro seja salvo e exibido.
             //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
             Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistros);
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             
             // UPDATE
             // É necessário abrir novamente a página; do contrário dá erro; não sei o porquê; até descobrir isso perdi mais de uma hora. Código inserido manualmente
-            //driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
-            Thread.Sleep(2000);
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
+            Thread.Sleep(500);
             driver.FindElement(By.Id("livicon-6")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             driver.FindElement(By.LinkText("22")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             driver.FindElement(By.Id("Edit-Observacoes")).Clear();
-            Thread.Sleep(2000);
-            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("UPDATE123456");            
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
+            driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Teste de UPDATE");            
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 007");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-MotivoNaoInteresseId"))).SelectByText("Minha religião não permite");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             new SelectElement(driver.FindElement(By.Id("Edit-CorretorId"))).SelectByText("Corretora Seguros Vida");
-            Thread.Sleep(2000);         
+            Thread.Sleep(500);         
             driver.FindElement(By.Id("EditDialogSaveButton")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             Assert.AreEqual("Registro alterado com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
 
             //DELETE
             driver.FindElement(By.Id("livicon-7")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             driver.FindElement(By.Id("DeleteDialogButton")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             Assert.AreEqual("Registro excluído com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
 
         }
         private bool IsElementPresent(By by)
