@@ -57,7 +57,7 @@ namespace ConsoleTeste
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
-                       
+
 
             // CREATE
             //não consegui colocar a seleção dos submenus, já que estes não dependem de click, sendo assim só o último menu é registrado
@@ -68,7 +68,7 @@ namespace ConsoleTeste
             driver.FindElement(By.CssSelector("button.jtable-toolbar-item-text")).Click();
             Thread.Sleep(4000); //TEMPO DE ESPERA INSERIDO MANUALMENTE, SEM O QUAL O TESTE NÃO FUNCIONA            
             driver.FindElement(By.LinkText("17")).Click();
-            Thread.Sleep(2000);            
+            Thread.Sleep(2000);
             driver.FindElement(By.Id("Edit-Observacoes")).Clear();
             Thread.Sleep(2000);
             driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("Teste de Observação");
@@ -86,8 +86,8 @@ namespace ConsoleTeste
             Thread.Sleep(5000);
             
             // UPDATE
-            // Se não abrir novamente o endereço, dá erro; não sei o porquê; até descobrir isso perdi mais de uma hora. Código inserido manualmente
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
+            // É necessário abrir novamente a página; do contrário dá erro; não sei o porquê; até descobrir isso perdi mais de uma hora. Código inserido manualmente
+            //driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Cadastro/Index/Prospeccao");
             Thread.Sleep(2000);
             driver.FindElement(By.Id("livicon-6")).Click();
             Thread.Sleep(2000);
@@ -97,7 +97,7 @@ namespace ConsoleTeste
             Thread.Sleep(2000);
             driver.FindElement(By.Id("Edit-Observacoes")).SendKeys("UPDATE123456");            
             Thread.Sleep(2000);
-            new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 005");
+            new SelectElement(driver.FindElement(By.Id("Edit-PropostaId"))).SelectByText("Pré Inscrito Pouprev 007");
             Thread.Sleep(2000);
             new SelectElement(driver.FindElement(By.Id("Edit-MotivoNaoInteresseId"))).SelectByText("Minha religião não permite");
             Thread.Sleep(2000);
@@ -106,9 +106,16 @@ namespace ConsoleTeste
             driver.FindElement(By.Id("EditDialogSaveButton")).Click();
             Thread.Sleep(2000);
             Assert.AreEqual("Registro alterado com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
+            Thread.Sleep(2000);
+
+            //DELETE
+            driver.FindElement(By.Id("livicon-7")).Click();
+            Thread.Sleep(2000);
+            driver.FindElement(By.Id("DeleteDialogButton")).Click();
+            Thread.Sleep(2000);
+            Assert.AreEqual("Registro excluído com sucesso", driver.FindElement(By.CssSelector("div.gritter-without-image > p")).Text);
             Thread.Sleep(5000);
 
-            
         }
         private bool IsElementPresent(By by)
         {
