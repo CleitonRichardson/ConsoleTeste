@@ -3,7 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
+
 
 namespace ConsoleTeste
 {
@@ -32,8 +35,8 @@ namespace ConsoleTeste
                 //TesteLoginValido.SetupTest();
                 //TesteLoginValido.TheLoginValidoTest();
 
-                //TesteProspeccaoVenda.SetupTest();
-                //TesteProspeccaoVenda.TheProspeccaoVendaTest();
+                TesteProspeccaoVenda.SetupTest();
+                TesteProspeccaoVenda.TheProspeccaoVendaTest();
 
                 //TesteMotivoNaoInteresse.SetupTest();
                 //TesteMotivoNaoInteresse.TheMotivoNaoInteresseTest();
@@ -47,11 +50,15 @@ namespace ConsoleTeste
                 //TesteConferenciaDocumentacao.SetupTest();
                 //TesteConferenciaDocumentacao.TheConferenciaDocumentacaoTest();
 
-                TesteBeneficioConcessao.SetupTest();
-                TesteBeneficioConcessao.TheBeneficioConcessaoTest();
+                //TesteBeneficioConcessao.SetupTest();
+                //TesteBeneficioConcessao.TheBeneficioConcessaoTest();
 
 
                 Console.WriteLine("Sucesso!");
+                Thread.Sleep(3000);
+                
+
+                
             }
             catch (Exception ex)
             {
@@ -62,12 +69,12 @@ namespace ConsoleTeste
 
                 //TesteLoginInvalido.TeardownTest();
                 //TesteLoginValido.TeardownTest();
-                //TesteProspeccaoVenda.TeardownTest();
+                TesteProspeccaoVenda.TeardownTest();
                 //TesteMotivoNaoInteresse.TeardownTest();
                 //TesteAvaliacaoPrevia.TeardownTest();
                 //TesteRegistroDocumentacao.TeardownTest();
                 //TesteConferenciaDocumentacao.TeardownTest();
-                TesteBeneficioConcessao.TeardownTest();
+                //TesteBeneficioConcessao.TeardownTest();
 
             }
         }

@@ -57,10 +57,10 @@ namespace ConsoleTeste
             var value = driver.FindElement(By.Id("user-info")).Text;
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
-                       
 
 
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/AvaliacaoPrevia"); //Link direto inserido manualmente em razão de ainda nao conseguir fazer pelo Menu
+            //Link direto inserido manualmente em razão de ainda nao conseguir fazer pelo Menu
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/AvaliacaoPrevia"); 
             Thread.Sleep(5000);
 
             //Captura a expressão que exibe o numero de registros (ex.: 1 a 10 de 12)
@@ -70,22 +70,22 @@ namespace ConsoleTeste
             Thread.Sleep(3000);
             driver.FindElement(By.Id("percentualMaximoDeSaque")).Clear(); //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
             Thread.Sleep(2000);
-            driver.FindElement(By.Id("percentualMaximoDeSaque")).SendKeys("2500"); // o valor máximo é de 30%. FAZER UMA ROTINA QUE VERIFICA ESSE VALOR MÁXIMO
+            driver.FindElement(By.Id("percentualMaximoDeSaque")).SendKeys("2500"); // o valor máximo é de 30% ??? Vereificar (FAZER UMA ROTINA QUE VERIFICA ESSE VALOR MÁXIMO)
             Thread.Sleep(2000);
             driver.FindElement(By.Id("btn-continuar")).Click();
-            Thread.Sleep(15000);   
+            Thread.Sleep(15000);
+            //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
             driver.FindElement(By.XPath("//div[@id='accordion']/div[2]/div/h4/a/span")).Click();
             Thread.Sleep(2000);
             driver.FindElement(By.XPath("(//button[@type='button'])[5]")).Click();
             Thread.Sleep(2000);
+            //Só funciona para "Aposentadoria Programada" e "Aposentadoria Antecipada". O Teste não prevê a possibilidade de "Renda por Invalidez" ou "Pensão por Morte"
             new SelectElement(driver.FindElement(By.Id("Opcoes"))).SelectByText("Renda Vitalícia com Cotas Decrescentes");
             Thread.Sleep(2000);
             driver.FindElement(By.Id("Opcao01")).Click();
             Thread.Sleep(2000);                
             driver.FindElement(By.XPath("(//button[@type='button'])[23]")).Click();
-            Thread.Sleep(5000);
-
-            //Compara a expressão que exibe o numero de registros antes e após a realizaçao do teste; se a expressão for diferente (FALSE) é porque houve sucesso no teste
+            Thread.Sleep(5000);            
             Assert.AreNotEqual((driver.FindElement(By.CssSelector("span.jtable-page-info")).Text), numeroRegistrosAvaliacaoPrevia);
             Thread.Sleep(6000);
 

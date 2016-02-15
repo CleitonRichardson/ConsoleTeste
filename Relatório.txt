@@ -3,7 +3,11 @@ PROBLEMAS:
 
 Selenium não registra click em submenus;
 
-Selenium não registra click em calendário [Prospecção e venda - data da prospecção];
+
+
+Selenium registra click em voltar ou avançar mês no elemento calendário mas o código não roda [Prospecção e venda - data da prospecção];
+Código gerado pelo Selenium: driver.FindElement(By.LinkText("Prev")).Click();
+
 
 Selenium não registra click em modal destinada a fazer upload de arquivo; [Em Registro de Documento. Solução feita à mão - encontrada na Internet.]
 
