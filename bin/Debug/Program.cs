@@ -23,8 +23,7 @@ namespace ConsoleTeste
             var TesteConferenciaDocumentacao = new ConferenciaDocumentacao();
             var TesteBeneficioConcessao = new BeneficioConcessao();
 
-
-            
+                        
             try
 
             {
@@ -63,6 +62,7 @@ namespace ConsoleTeste
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                Thread.Sleep(5000);
             }
             finally
             {

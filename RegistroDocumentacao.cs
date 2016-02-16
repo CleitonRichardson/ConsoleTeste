@@ -57,7 +57,8 @@ namespace ConsoleTeste
             var contains = value.ToLower().IndexOf("cleiton") != -1;
             Assert.IsTrue(contains);
 
-            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/SolicitacaoBeneficio");            
+
+            driver.Navigate().GoToUrl("http://vegeta.vitalbusiness.com.br/WebAppTeste/Beneficio/SolicitacaoBeneficio");
             Thread.Sleep(2000);
             driver.FindElement(By.Id("canvas-for-livicon-6")).Click();  //esse tive que pegar na mão... indo lá, vendo o código HTML e digitando aqui
             Thread.Sleep(2000);
@@ -74,9 +75,9 @@ namespace ConsoleTeste
             //http://sqa.stackexchange.com/questions/15103/testing-the-downloading-uploading-of-files-with-selenium-ide-webdriver-other
             IWebElement element = driver.FindElement(By.Name("inputUploadDeArquivos"));
             element.SendKeys(@"C:\\Users\\Charles\\Desktop\\COF.txt");
-                        
-            Thread.Sleep(2000);            
-            driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();            
+
+            Thread.Sleep(2000);
+            driver.FindElement(By.XPath("(//button[@type='button'])[4]")).Click();
             Thread.Sleep(2000);
             driver.FindElement(By.Id("btn-disp_solic_para_conf")).Click();
             Thread.Sleep(2000);

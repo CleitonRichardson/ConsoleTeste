@@ -1,15 +1,22 @@
-PROBLEMAS:
+RELATÓRIO
 
 
-Selenium não registra click em submenus;
+Selenium não registra a passagem por submenus;
+
+	SOLUÇÃO: Entrar na página direto, pelo endereço absoluto.
 
 
 
-Selenium registra click em voltar ou avançar mês no elemento calendário mas o código não roda [Prospecção e venda - data da prospecção];
-Código gerado pelo Selenium: driver.FindElement(By.LinkText("Prev")).Click();
+Selenium registra click em voltar ou avançar mês no elemento calendário mas o código gerado não roda [Prospecção e venda - data da prospecção]; Código gerado pelo Selenium: driver.FindElement(By.LinkText("Prev")).Click();
+
+	SOLUCIONADO POR FABIO: FAZER COM QUE O SELENIUM CAPUTURE TODOS OS ELEMENTOS PELO CAMINHO ABSOLUTO (XPATH)
+
 
 
 Selenium não registra click em modal destinada a fazer upload de arquivo; [Em Registro de Documento. Solução feita à mão - encontrada na Internet.]
 
+
+
 Em algumas vezes, mesmo o Selenium registrando o click no elemento, ao rodar o teste não funciona. Em alguns casos a razão é simples: O Seleinum registra o elemento pelo ID quando deveria registrar pelo NAME (e vice-versa).
 
+	IDENTIFICAR EXATAMENTE ONDE ISSO OCORRE
