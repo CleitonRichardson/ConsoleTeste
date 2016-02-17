@@ -54,7 +54,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvaliacaoPrevia.cs" />
+    <Compile Include="AvaliacaoPrevia.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="BeneficioConcessao.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -76,12 +78,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProspeccaoVenda.cs">
       <SubType>Code</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="RegistroDocumentacao.cs" />
+    <Compile Include="RegistroDocumentacao.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages\NUnit.3.0.1\NUnit.3.0.1.nupkg" />
     <None Include="packages\repositories.config" />
     <None Include="packages\Selenium.Support.2.49.0\Selenium.Support.2.49.0.nupkg" />

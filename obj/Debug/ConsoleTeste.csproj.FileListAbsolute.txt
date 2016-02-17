@@ -14,14 +14,18 @@ C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTest
 C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.xml
 C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\bin\Debug\WebDriver.Support.xml
 C:\Users\Charles\Desktop\Cleiton Souza\GitHub\ConsoleDeTesteSelinium\ConsoleTeste\obj\Debug\ConsoleTeste.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe.config
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ChromeDriver\chromedriver.exe
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\AvaliacaoPrevia.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\BeneficioConcessao.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConferenciaDocumentacao.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginInvalido.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\LoginValido.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\MotivoNaoInteresse.cs
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\Program.cs
-C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe.config
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ProspeccaoVenda.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\RegistroDocumentacao.cs
+C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\packages.config
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.exe
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\ConsoleTeste.pdb
 C:\Users\Charles\Documents\GitHub\ConsoleDeTesteSelnium\ConsoleTeste\bin\Debug\nunit.framework.dll
